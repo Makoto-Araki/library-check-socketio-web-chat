@@ -1,0 +1,20 @@
+#step1 {
+  display: none
+}
+
+#step2 {
+  display: none
+}
+
+#msglist {
+  list-style-type: none;
+  padding-left: 1px;
+}
+
+.msg-me {
+  color:blue
+}
+
+.name {
+  font-weight: bold
+}
