@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Web Chat</title>
+<style>
+  #step1{display:none}
+  #step2{display:none}
+  #msglist{list-style-type:none; padding-left:1px;}
+  .msg-me{color:blue}
+  .name {font-weight:bold}
+</style>
+</head>
+<body>
+
+<!-- Title --->
+<h1>Web-Chat</h1>
+
+<!-- Step1 --->
+<section id="step1">
+  Now Connecting...
+</section>
+
+<!-- Step2 --->
+<section id="step2">
+  <p>Input Name</p>
+  <form id="frm-myname">
+  <input type="text" id="txt-myname">
+  <button>Entry</button>
+  </form>
+</section>
+
+<!-- Step3 --->
+<section id="step3">
+  <p>Send Message</p>
+  <form id="frm-post">
+  <input type="text" id="msg">
+  <button>Send</button>
+  </form>
+  <ul id="msglist"></ul>
+</section>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
