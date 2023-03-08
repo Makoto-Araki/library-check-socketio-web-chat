@@ -52,12 +52,9 @@ document.querySelector("#frm-post").addEventListener("submit", function(e) {
 socket.on("member-post", function(msg) {
   const is_me = (msg.token === IAM.token);
   addMessage(msg, is_me);
-  //const list = document.querySelector("#msglist");
-  //const li = document.createElement("li");
-  //li.innerHTML = `${msg.text}`;
-  //list.insertBefore(li, list.firstChild);
 });
 
+// Add Message to List
 function addMessage(msg, is_me=false) {
   const list = document.getElementById('msglist');
   const li = document.createElement("li");
@@ -68,8 +65,3 @@ function addMessage(msg, is_me=false) {
   }
   list.insertBefore(li, list.firstChild);
 }
-
-// Focus Setting
-//window.onload = ()=>{
-//  document.querySelector("#msg").focus();
-//}
